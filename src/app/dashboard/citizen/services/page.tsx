@@ -18,7 +18,9 @@ export default function ServicesPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/api/services")
+    // Auto-seed the database silently in the background (Handles Render Free Tier resets)
+    fetch("/api/seed")
+      .then(() => fetch("/api/services"))
       .then(res => res.json())
       .then(data => {
         setServices(data);
