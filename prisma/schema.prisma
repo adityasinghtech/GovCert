@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  password      String?
+  role          String    @default("CITIZEN") // CITIZEN, AGENT, ADMIN
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // Agent Specific Verification Fields
+  isVerified    Boolean   @default(false)
+  kycDocs       String?   // JSON stringified document references for verification
+
+  requests      ServiceRequest[] @relation("citizenRequests")
+  assignedTasks ServiceRequest[] @relation("agentTasks")
+}
+
+model Service {
+  id              String    @id @default(cuid())
+  name            String
+  description     String
+  requiredDocs    String    // JSON stringified array of required document names
+  estimatedTime   String
+  serviceCharge   Float
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  requests        ServiceRequest[]
+}
+
+model ServiceRequest {
+  id              String    @id @default(cuid())
+  
+  citizenId       String
+  citizen         User      @relation("citizenRequests", fields: [citizenId], references: [id])
+  
+  agentId         String?
+  agent           User?     @relation("agentTasks", fields: [agentId], references: [id])
+  
+  serviceId       String
+  service         Service   @relation(fields: [serviceId], references: [id])
+  
+  status          String    @default("PENDING") // PENDING, ACCEPTED, IN_PROGRESS, COMPLETED, REJECTED
+  formData        String?   // JSON stringified citizen input (Name, State, District, DOB)
+  userDocs        String    // JSON stringified array of `{ name, path }`
+  completedDocs   String?   // JSON stringified array of `{ name, path }` provided by agent on completion
+  
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
