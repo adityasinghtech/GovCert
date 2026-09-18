@@ -6,154 +6,39 @@
     <meta name="robots" content="noindex, nofollow">
     <title>Verification Portal</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f7f7f7;
-            color: #333;
-        }
-        .top-banner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 8px 15px;
-            background: #fff;
-            position: relative;
-        }
-        .top-banner::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #ff9933 0%, #ffffff 50%, #138808 100%);
-        }
-        .logo-left, .logo-center, .logo-right {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .logo-left img { height: 45px; }
-        .logo-center {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .logo-center img { height: 45px; }
-        .logo-right img { height: 20px; }
-        .card-container {
-            padding: 40px 15px;
-            display: flex;
-            justify-content: center;
-        }
-        .card {
-            background: #fff;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-            border-radius: 2px;
-            border: 1px solid #eaeaea;
-            width: 100%;
-            max-width: 500px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        td {
-            padding: 14px 12px;
-            border-bottom: 1px solid #e0e0e0;
-            border-right: 1px solid #e0e0e0;
-            vertical-align: top;
-            font-size: 14px;
-        }
-        td:first-child {
-            color: #555;
-            width: 40%;
-        }
-        td:last-child {
-            color: #222;
-            border-right: none;
-        }
+        body { font-family: Arial, sans-serif; margin: 0; background-color: #fcfcfc; color: #333; }
+        .header-top { display: flex; justify-content: center; padding: 15px 0 10px 0; background-color: #fff; }
+        .header-top img { height: 60px; }
+        .flag-bar { width: 100%; height: 4px; background: linear-gradient(90deg, #ff9933 33.3%, #ffffff 33.3%, #ffffff 66.6%, #138808 66.6%); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .card-container { padding: 40px 15px; display: flex; justify-content: center; }
+        .card { background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #eaeaea; width: 100%; max-width: 600px; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 16px 20px; border-bottom: 1px solid #e0e0e0; border-right: 1px solid #e0e0e0; font-size: 14px; }
+        td:first-child { color: #555; width: 40%; }
+        td:last-child { color: #222; border-right: none; }
         tr:last-child td { border-bottom: none; }
-        
-        .footer-logos {
-            background-color: #194a7a;
-            padding: 30px 0;
-            text-align: center;
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
     </style>
 </head>
 <body>
-    <div class="top-banner">
-        <div class="logo-left">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/330px-Emblem_of_India.svg.png" alt="RGI" style="filter: hue-rotate(200deg);">
-        </div>
-        <div class="logo-center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/330px-Emblem_of_India.svg.png" alt="Satyameva Jayate">
-        </div>
-        <div class="logo-right">
-            <span style="font-size:18px;">🌙</span>
-            <div style="background: #194a7a; color: white; padding: 4px 8px; border-radius: 3px; font-size:12px; font-weight:bold;">→]</div>
-            <span style="font-size: 20px; font-weight: bold; color:#194a7a; margin-left: 5px;">≡</span>
-        </div>
+    <div class="header-top">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/330px-Emblem_of_India.svg.png" alt="Satyameva Jayate">
     </div>
-
+    <div class="flag-bar"></div>
     <div class="card-container">
         <div class="card">
             <table>
-                <tr>
-                    <td>Registration Number</td>
-                    <td>B 2026990347007655</td>
-                </tr>
-                <tr>
-                    <td>NAME</td>
-                    <td>VEDANT SINGH</td>
-                </tr>
-                <tr>
-                    <td>GENDER</td>
-                    <td>Male / पुरुष</td>
-                </tr>
-                <tr>
-                    <td>DOB</td>
-                    <td>05-11-2022</td>
-                </tr>
-                <tr>
-                    <td>Name Of Mother</td>
-                    <td>PRIYANKA SINGH</td>
-                </tr>
-                <tr>
-                    <td>Name Of Father</td>
-                    <td>MITHILESH KUMAR</td>
-                </tr>
-                <tr>
-                    <td>Place of Birth</td>
-                    <td>PRIMARY HEALTH CENTRES TEEN PAHAR,</td>
-                </tr>
-                <tr>
-                    <td>Registration Date</td>
-                    <td>05-02-2026</td>
-                </tr>
-                <tr>
-                    <td>Registration Unit Name</td>
-                    <td>GRAMA PANCHAYAT TEEN PAHAR /</td>
-                </tr>
-                <tr>
-                    <td>Registration Unit Code</td>
-                    <td>827006</td>
-                </tr>
+                <tr><td>Registration Number</td><td>B 2026990347007655</td></tr>
+                <tr><td>NAME</td><td>VEDANT SINGH</td></tr>
+                <tr><td>GENDER</td><td>Male / पुरुष</td></tr>
+                <tr><td>DOB</td><td>05-11-2022</td></tr>
+                <tr><td>Name Of Mother</td><td>PRIYANKA SINGH</td></tr>
+                <tr><td>Name Of Father</td><td>MITHILESH KUMAR</td></tr>
+                <tr><td>Place of Birth</td><td>PRIMARY HEALTH CENTRES TEEN PAHAR,</td></tr>
+                <tr><td>Registration Date</td><td>05-02-2026</td></tr>
+                <tr><td>Registration Unit Name</td><td>GRAMA PANCHAYAT TEEN PAHAR /</td></tr>
+                <tr><td>Registration Unit Code</td><td>827006</td></tr>
             </table>
         </div>
-    </div>
-
-    <div class="footer-logos">
-        <div style="color: white; font-weight: bold; font-size: 26px;">data.gov.in</div>
-        <div style="color: #ff9933; font-weight: bold; font-size: 26px;">india<span style="color:white;">.gov.in</span></div>
     </div>
 </body>
 </html>
