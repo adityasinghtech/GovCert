@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verification (Demo)</title>
+    <title>Verification Portal</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -32,10 +32,22 @@
         .logo-left { display: flex; align-items: center; gap: 10px; }
         .logo-left img { height: 45px; }
         .logo-right { display: flex; align-items: center; gap: 12px; }
-        .logo-right img { height: 20px; }
         .card-container {
             padding: 20px 15px;
             margin-top: 10px;
+        }
+        .success-banner {
+            background-color: #f0fdf4;
+            color: #166534;
+            padding: 12px 15px;
+            border: 1px solid #bbf7d0;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 14px;
         }
         .card {
             background: #fff;
@@ -61,6 +73,7 @@
         td:last-child {
             color: #222;
             border-right: none;
+            font-weight: bold;
         }
         tr:last-child td { border-bottom: none; }
         
@@ -71,51 +84,42 @@
             margin-top: 30px;
             display: flex;
             justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        .footer-logos img {
-            height: 40px;
-            background: #fff;
-            padding: 5px;
-            border-radius: 2px;
-        }
-        .header-url {
-            background: #000;
-            color: #fff;
-            padding: 8px 15px;
-            display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            font-size: 14px;
+            gap: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
-    <div style="background-color: #d32f2f; color: white; text-align: center; padding: 10px; font-weight: bold; font-size: 14px; position: sticky; top: 0; z-index: 1000;">
-        ⚠️ DEMO / EDUCATIONAL PROJECT ONLY. NOT AN OFFICIAL GOVERNMENT WEBSITE. ⚠️
-    </div>
+    
     <div class="top-banner">
         <div class="logo-left">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/330px-Emblem_of_India.svg.png" alt="RGI" style="mask-image: none; -webkit-mask-image: none; filter: hue-rotate(200deg);">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/330px-Emblem_of_India.svg.png" alt="Emblem" style="filter: hue-rotate(-10deg);">
         </div>
         <div class="logo-right">
             <span style="font-size:18px;">🌙</span>
-            <div style="background: #194a7a; color: white; padding: 4px; border-radius: 3px; border: 1px solid white; box-shadow: 0 0 0 1px #194a7a; font-size:12px; display:inline-block;">→]</div>
+            <div style="background: #194a7a; color: white; padding: 4px; border-radius: 3px; font-size:12px;">→]</div>
             <span style="font-size: 20px; font-weight: bold; color:#194a7a">≡</span>
         </div>
     </div>
 
     <div class="card-container">
+        <div class="success-banner">
+            <svg style="width: 20px; height: 20px;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+            Certificate Verified Successfully
+        </div>
         <div class="card">
             <table>
                 <tr>
                     <td>Registration Number</td>
-                    <td>B2026990347007655</td>
+                    <td>B2026990347007010</td>
                 </tr>
                 <tr>
                     <td>NAME</td>
-                    <td>VEDANT SINGH</td>
+                    <td>VIRANSH SINGH</td>
                 </tr>
                 <tr>
                     <td>GENDER</td>
@@ -123,7 +127,7 @@
                 </tr>
                 <tr>
                     <td>DOB</td>
-                    <td>05-11-2022</td>
+                    <td>03-10-2021</td>
                 </tr>
                 <tr>
                     <td>Name Of Mother</td>
@@ -139,7 +143,7 @@
                 </tr>
                 <tr>
                     <td>Registration Date</td>
-                    <td>05-02-2026</td>
+                    <td>05-03-2025</td>
                 </tr>
                 <tr>
                     <td>Registration Unit Name</td>
@@ -154,12 +158,9 @@
     </div>
 
     <div class="footer-logos">
-        <div style="color: white; font-weight: bold; font-size: 16px; margin-bottom: 5px; width: 100%;">data.gov.in</div>
-        <div style="color: white; font-weight: bold; font-size: 16px; width: 100%;">india.gov.in</div>
+        <div>data.gov.in</div>
+        <div>india.gov.in</div>
     </div>
-    
-    <!-- Anti-Phishing Visual Noise Square -->
-    <div style="position: fixed; bottom: 10px; right: 10px; width: 35px; height: 35px; background-color: #f7f7f7; pointer-events: none; border-radius: 2px; z-index: 9999;"></div>
 
 </body>
 </html>
